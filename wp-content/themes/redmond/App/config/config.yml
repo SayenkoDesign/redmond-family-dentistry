@@ -22,10 +22,12 @@ parameters:
     desktop_menu: "Desktop Menu"
     mobile_menu: "Mobile Menu"
   wordpress.styles:
+    - { id: "ptserif", source: "https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic", deps: ~ }
+    - { id: "lato", source: "https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900italic,900,300italic,300,100italic,100", deps: ~ }
     - { id: "fancybox", source: "%template_uri%/web/stylesheets/jquery.fancybox.css", deps: ~ }
     - { id: "slick", source: "%template_uri%/web/stylesheets/slick.css", deps: ~ }
     - { id: "slick-theme", source: "%template_uri%/web/stylesheets/slick-theme.css", deps: ["slick"] }
-    - { id: "app", source: "%template_uri%/web/stylesheets/app.css", deps: ["fancybox", "slick-theme"] }
+    - { id: "app", source: "%template_uri%/web/stylesheets/app.css", deps: ["fancybox", "slick-theme", "lato", "ptserif"] }
   wordpress.scripts:
     - { id: "app", source: "%template_uri%/web/scripts-min/app.min.js", deps: ~, header: false }
 
