@@ -59,6 +59,12 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #ec5840,
 );
+$primary-dark: map-get($foundation-palette, primary-dark);
+$primary: map-get($foundation-palette, primary);
+$primary-light: map-get($foundation-palette, primary-light);
+$secondary-light: map-get($foundation-palette, secondary-light);
+$secondary: map-get($foundation-palette, secondary);
+$secondary-dark: map-get($foundation-palette, secondary-dark);
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
@@ -147,7 +153,7 @@ $code-padding: rem-calc(2 5 1);
 $anchor-color: $primary-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: 15%);
 $anchor-text-decoration: none;
-$anchor-text-decoration-hover: underline;
+$anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid $medium-gray;
 $hr-margin: rem-calc(20) auto;
