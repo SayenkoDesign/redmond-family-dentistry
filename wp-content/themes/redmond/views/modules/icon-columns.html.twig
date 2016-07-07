@@ -1,1 +1,18 @@
 {# icons below our services section in home page #}
+<section class="icon-columns">
+    <div class="row">
+        {% for column in SP.ACF.get_sub_field('columns') %}
+            <div class="large-4 columns">
+                <div class="icon-title">
+                    <img src="{{ column.icon.url }}" />
+                    <h2><small>{{ column.small_heading }}</small> {{ column.large_heading }}</h2>
+                </div>
+                <ul class="vertical menu">
+                    {% for link in column.links %}
+                        <li><a href="{{ SP.WordPress.URL(link.link) }}">{{ link.link.post_title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</section>

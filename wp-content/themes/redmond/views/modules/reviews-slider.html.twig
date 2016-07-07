@@ -1,1 +1,14 @@
 {# yelp section on home page #}
+<section class="reviews">
+    <div class="slick reviews-slider">
+        {% for testimony in SP.ACF.get_sub_field('testimonies') %}
+            <div>
+                <div class="row column">
+                    <img src="{{ testimony.logo.url }}" class="logo">
+                    <blockquote>{{ testimony.testimony }}</blockquote>
+                    <cite>{{ testimony.testimony_author }}</cite>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
