@@ -1,1 +1,12 @@
 {# we work with ppo providers section #}
+<section class="partners">
+    <div class="row">
+        <h2><small>{{ SP.ACF.get_sub_field('small_heading') }}</small>{{ SP.ACF.get_sub_field('large_heading') }}</h2>
+        <div class="content">{{ SP.ACF.get_sub_field('content') }}</div>
+        <div class="partners-slider slick">
+            {% for logo in SP.ACF.get_sub_field('logos') %}
+                <img src="{{ logo.logo.url }}">
+            {% endfor %}
+        </div>
+    </div>
+</section>

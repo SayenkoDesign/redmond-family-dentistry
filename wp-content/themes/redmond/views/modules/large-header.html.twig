@@ -1,0 +1,9 @@
+<section class="large hero-header" style="background-image: url({{ SP.ACF.get_sub_field('background_image').url }})">
+    <div class=" text-center">
+        <h1>{{ SP.ACF.get_sub_field('heading') }}</h1>
+        {% if SP.ACF.get_sub_field('subtitle') %}
+            <p>{{ SP.ACF.get_sub_field('subtitle') }}</p>
+        {% endif %}
+        <a href="{{ SP.ACF.get_sub_field('button_url') }}" class="large primary button">{{ SP.ACF.get_sub_field('button_text') }}</a>
+    </div>
+</section>
