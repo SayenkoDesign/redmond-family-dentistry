@@ -22,3 +22,15 @@
 @import "modules/title-section";
 
 // classes
+h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  small {
+    color: $primary-dark-color;
+    font-style: italic;
+    display: block;
+    margin-bottom: rem-calc(8px);
+    padding-top: rem-calc(30px);
+    text-transform: none;
+  }
+}
