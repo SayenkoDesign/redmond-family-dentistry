@@ -16,6 +16,7 @@
     }
     h2 {
       text-transform: uppercase;
+      font-weight: bold;
     }
     h2 small {
       color: $primary-dark;
@@ -27,9 +28,22 @@
       text-transform: none;
     }
   }
-  .menu {
+  ul.menu {
+    position: relative;
     li a {
-      padding: 0 0 rem-calc(15px) rem-calc(20px);
+      padding: 0 0 rem-calc(15px) rem-calc(25px);
+      font-size: rem-calc(18px);
+    }
+    li a:before {
+      content: "\f105";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      font-size: rem-calc(25px);
+      color: $primary-dark;
+      line-height: .8rem;
+      position: absolute;
+      left: rem-calc(9px);
     }
   }
 }
