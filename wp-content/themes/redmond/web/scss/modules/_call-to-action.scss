@@ -1,4 +1,19 @@
 // ready to schedule row in home page
 .call-to-action {
-
+  background-color: $secondary;
+  padding: rem-calc(60px);
+  .row {
+    position: relative;
+  }
+  .heading {
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    color: $secondary-light;
+    padding: rem-calc(20px) 0;
+  }
+  .button {
+    float: right;
+    margin-bottom: 0;
+  }
 }
