@@ -35,29 +35,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.slick-slider {
+.slick-slide {
   position: relative;
-  .slick-slide {
-    height: auto;
-  }
-  .slick-arrow {
-    height: auto;
-    width: auto;
-  }
-  .slick-next:before {
-    content: "\f105";
-    font-family: FontAwesome;
-    font-style: normal;
-    font-size: rem-calc(75px);
-    color: $primary-color;
-  }
-  .slick-prev:before {
-    content: "\f104";
-    font-family: FontAwesome;
-    font-style: normal;
-    font-size: rem-calc(75px);
-    color: $primary-color;
-  }
+  width: 92%;
+  margin: 0 auto;
 }
 
 .icon-title {
