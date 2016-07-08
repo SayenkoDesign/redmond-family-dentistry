@@ -1,22 +1,24 @@
 {# why choose us section in home page #}
 <section class="comparison-table">
-    <h2><small>{{ SP.ACF.get_sub_field('small_heading') }}</small>{{ SP.ACF.get_sub_field('large_heading') }}</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Comparison</th>
-                <th>Our Approach <div class="vs">VS</div></th>
-                <th>Typical Dentist</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for row in SP.ACF.get_sub_field('table') %}
+    <div class="row">
+        <h2><small>{{ SP.ACF.get_sub_field('small_heading') }}</small>{{ SP.ACF.get_sub_field('large_heading') }}</h2>
+        <table>
+            <thead>
                 <tr>
-                    <td>{{ row.comparison_text }}</td>
-                    <td><i class="fa fa-check"></i></td>
-                    <td><i class="fa fa-cross"></i>{{ row.typical_dentist_text }}</td>
+                    <th>Comparison</th>
+                    <th>Our Approach <div class="vs">VS</div></th>
+                    <th>Typical Dentist</th>
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                {% for row in SP.ACF.get_sub_field('table') %}
+                    <tr>
+                        <td>{{ row.comparison_text }}</td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-cross"></i>{{ row.typical_dentist_text }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </section>
