@@ -10,6 +10,9 @@
     a {
       font-size: rem-calc(15px);
     }
+    a:hover {
+      text-decoration: none;
+    }
   }
 }
 

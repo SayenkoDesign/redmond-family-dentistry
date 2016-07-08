@@ -7,29 +7,4 @@
   li a:hover {
     color: $primary-color;
   }
-  .icon-title {
-    margin-bottom: rem-calc(30px);
-    img {
-      float: left;
-      margin-right: rem-calc(10px);
-    }
-  }
-  ul.menu {
-    position: relative;
-    li a {
-      padding: 0 0 rem-calc(15px) rem-calc(25px);
-      font-size: rem-calc(18px);
-    }
-    li a:before {
-      content: "\f105";
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      font-size: rem-calc(25px);
-      color: $primary-dark-color;
-      line-height: .8rem;
-      position: absolute;
-      left: rem-calc(9px);
-    }
-  }
 }
