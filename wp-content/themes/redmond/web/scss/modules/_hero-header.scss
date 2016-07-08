@@ -4,6 +4,18 @@
 
   }
   &.large {
-
+    padding: rem-calc(170px) 0;
+    color: $primary-light-color;
+    margin-bottom: rem-calc(40px);
+    a {
+      font-size: rem-calc(15px);
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
+}
+
+.button {
+  text-transform: uppercase;
 }

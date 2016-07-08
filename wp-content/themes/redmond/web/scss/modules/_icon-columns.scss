@@ -1,1 +1,10 @@
-// icons below our services section in home page
+.icon-columns {
+  margin-bottom: rem-calc(70px);
+  li a {
+    text-transform: uppercase;
+    color: $secondary-dark-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

@@ -22,3 +22,69 @@
 @import "modules/title-section";
 
 // classes
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  small {
+    color: $primary-dark-color;
+    font-style: italic;
+    font-weight: normal;
+    display: block;
+    margin-bottom: rem-calc(8px);
+    padding-top: rem-calc(30px);
+    text-transform: none;
+  }
+}
+
+.slick-slider {
+  position: relative;
+  .slick-slide {
+    height: auto;
+  }
+  .slick-arrow {
+    height: auto;
+    width: auto;
+  }
+  .slick-next:before {
+    content: "\f105";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-size: rem-calc(75px);
+    color: $primary-color;
+  }
+  .slick-prev:before {
+    content: "\f104";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-size: rem-calc(75px);
+    color: $primary-color;
+  }
+}
+
+.icon-title {
+  margin-bottom: rem-calc(30px);
+  img {
+    float: left;
+    margin-right: rem-calc(10px);
+  }
+}
+ul.menu {
+  position: relative;
+  li a {
+    padding: 0 0 rem-calc(15px) rem-calc(25px);
+    font-size: rem-calc(18px);
+    &:before {
+      content: "\f105";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      font-size: rem-calc(25px);
+      color: $primary-dark-color;
+      line-height: .8rem;
+      position: absolute;
+      left: rem-calc(9px);
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

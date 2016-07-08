@@ -29,7 +29,7 @@ parameters:
     - { id: "slick-theme", source: "%template_uri%/web/stylesheets/slick-theme.css", deps: ["slick"] }
     - { id: "app", source: "%template_uri%/web/stylesheets/app.css", deps: ["fancybox", "slick-theme", "lato", "ptserif"] }
   wordpress.scripts:
-    - { id: "app", source: "%template_uri%/web/scripts-min/app.min.js", deps: ~, header: false }
+    - { id: "app", source: "%template_uri%/web/scripts-min/app.min.js", deps: ["jquery"], header: false }
 
 services:
   # just the basics
