@@ -2,8 +2,8 @@
     <div class=" text-center">
         <h1>{{ SP.ACF.get_sub_field('heading') }}</h1>
         {% if SP.ACF.get_sub_field('subtitle') %}
-            <p>{{ SP.ACF.get_sub_field('subtitle') }}</p>
+            <h4>{{ SP.ACF.get_sub_field('subtitle') }}</h4>
         {% endif %}
-        <a href="{{ SP.ACF.get_sub_field('button_url') }}" class="large primary button">{{ SP.ACF.get_sub_field('button_text') }}</a>
+        <a href="{{ SP.ACF.get_sub_field('button_url') }}" class="primary button">{{ SP.ACF.get_sub_field('button_text') }}</a>
     </div>
 </section>

@@ -1,1 +1,35 @@
-// icons below our services section in home page
+.icon-columns {
+  margin-bottom: rem-calc(70px);
+  li a {
+    text-transform: uppercase;
+    color: $secondary-dark;
+  }
+
+  li a:hover {
+    color: $primary;
+  }
+  .icon-title {
+    margin-bottom: rem-calc(30px);
+    img {
+      float: left;
+      margin-right: rem-calc(10px);
+    }
+    h2 {
+      text-transform: uppercase;
+    }
+    h2 small {
+      color: $primary-dark;
+      font-style: italic;
+      display: block;
+      margin-bottom: rem-calc(8px);
+      padding-top: rem-calc(30px);
+      margin-left: rem-calc(15px);
+      text-transform: none;
+    }
+  }
+  .menu {
+    li a {
+      padding: 0 0 rem-calc(15px) rem-calc(20px);
+    }
+  }
+}
