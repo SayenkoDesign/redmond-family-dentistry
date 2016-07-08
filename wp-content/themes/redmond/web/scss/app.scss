@@ -35,6 +35,28 @@ h2 {
   }
 }
 
-.slick-slide {
-  height: auto;
+// body > div.page-content > section.partners > div > div.partners-slider.slick.slick-initialized.slick-slider > button.slick-next.slick-arrow
+.slick-slider {
+  position: relative;
+  .slick-slide {
+    height: auto;
+  }
+  .slick-arrow {
+    height: auto;
+    width: auto;
+  }
+  .slick-next:before {
+    content: "\f105";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-size: rem-calc(75px);
+    color: $primary-color;
+  }
+  .slick-prev:before {
+    content: "\f104";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-size: rem-calc(75px);
+    color: $primary-color;
+  }
 }
