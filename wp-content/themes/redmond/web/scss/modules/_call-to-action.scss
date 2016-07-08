@@ -1,23 +1,32 @@
 // ready to schedule row in home page
 .call-to-action {
   background-color: $secondary-color;
-  padding: rem-calc(60px) 0;
+  padding: rem-calc(60px) rem-calc(40px);
   .row {
     position: relative;
   }
   .heading {
+    padding-bottom: rem-calc(20px);
     text-transform: uppercase;
-    position: absolute;
-    left: 0;
+    position: relative;
+    float: left;
+    clear: right;
     color: $secondary-light-color;
-    padding: rem-calc(20px) 0;
     @include breakpoint(medium) {
-      position: relative;
-      float: none;
+      position: absolute;
+      left: 0;
+      width: 50%;
+    }
+    @include breakpoint(large) {
+      width: 100%;
+      padding-top: rem-calc(20px);
     }
   }
   .button {
     float: right;
     margin-bottom: 0;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
