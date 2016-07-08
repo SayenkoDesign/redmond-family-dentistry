@@ -1,7 +1,7 @@
 // ready to schedule row in home page
 .call-to-action {
-  background-color: $secondary;
-  padding: rem-calc(60px);
+  background-color: $secondary-color;
+  padding: rem-calc(60px) 0;
   .row {
     position: relative;
   }
@@ -9,7 +9,7 @@
     text-transform: uppercase;
     position: absolute;
     left: 0;
-    color: $secondary-light;
+    color: $secondary-light-color;
     padding: rem-calc(20px) 0;
   }
   .button {
