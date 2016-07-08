@@ -11,7 +11,7 @@
     left: 0;
     color: $secondary-light-color;
     padding: rem-calc(20px) 0;
-    @include breakpoint(medium only) {
+    @include breakpoint(medium) {
       position: relative;
       float: none;
     }

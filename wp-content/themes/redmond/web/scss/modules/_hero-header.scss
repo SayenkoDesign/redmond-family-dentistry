@@ -9,9 +9,9 @@
     margin-bottom: rem-calc(40px);
     a {
       font-size: rem-calc(15px);
-    }
-    a:hover {
-      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }

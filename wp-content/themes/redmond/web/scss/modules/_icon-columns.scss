@@ -3,8 +3,8 @@
   li a {
     text-transform: uppercase;
     color: $secondary-dark-color;
-  }
-  li a:hover {
-    color: $primary-color;
+    &:hover {
+      color: $primary-color;
+    }
   }
 }
