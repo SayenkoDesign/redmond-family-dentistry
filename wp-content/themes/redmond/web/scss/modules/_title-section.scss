@@ -1,4 +1,7 @@
 // our services row in home page
 .title-section {
-
+  padding: rem-calc(40px);
+  p {
+    color: $secondary-color;
+  }
 }
