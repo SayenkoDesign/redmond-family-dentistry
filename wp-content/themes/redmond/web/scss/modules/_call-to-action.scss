@@ -19,6 +19,7 @@
     @include breakpoint(large) {
       display: inline-block;
       padding-right: rem-calc(15px);
+      padding-bottom: 0;
     }
   }
   .action {

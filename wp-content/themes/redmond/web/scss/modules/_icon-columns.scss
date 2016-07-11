@@ -2,7 +2,6 @@
   margin-bottom: rem-calc(70px);
   padding: 0 rem-calc(40px);
   .row {
-    padding-left: rem-calc(40px);
     @include breakpoint(large) {
       padding-left: 0;
     }
