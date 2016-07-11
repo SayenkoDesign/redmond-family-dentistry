@@ -1,4 +1,10 @@
 // yelp section on home page
 .reviews-slider {
-
+  background: $secondary-dark-color;
+  .slick-dotted.slick-slider {
+    margin-bottom: rem-calc(12px);
+  }
+  .slick-dots {
+    bottom: 0;
+  }
 }

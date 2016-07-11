@@ -16,6 +16,7 @@ jQuery(function() {
         }]
     });
     jQuery('.reviews-slider').slick({
-        slidesToShow: 1
+        slidesToShow: 1,
+        dots: true
     });
 });
