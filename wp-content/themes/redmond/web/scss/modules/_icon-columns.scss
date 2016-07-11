@@ -1,5 +1,18 @@
 .icon-columns {
   margin-bottom: rem-calc(70px);
+  .row {
+    padding-left: 40px;
+    @include breakpoint(large) {
+      padding-left: 0;
+    }
+    .columns {
+      margin-bottom: 30px;
+      @include breakpoint(large) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   li a {
     text-transform: uppercase;
     color: $secondary-dark-color;
