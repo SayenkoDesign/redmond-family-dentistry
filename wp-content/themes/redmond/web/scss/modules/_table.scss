@@ -1,4 +1,30 @@
 // why choose us section in home page
-.compare-table {
-
+.comparison-table {
+  th {
+    background-color: $primary-dark-color;
+    color: $primary-light-color;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    &:nth-child(2) {
+      padding-right: rem-calc(40px);
+    }
+    &:nth-child(3) {
+      background-color: $secondary-dark-color;
+    }
+    .vs {
+      color: $secondary-dark-color;
+      height: 65px;
+      width: 65px;
+      text-align: center;
+      vertical-align: middle;
+      border-radius: 50%;
+      border: 2px $secondary-dark-color solid;
+      background: $white;
+      position: absolute;
+      right: rem-calc(-40px);
+      top: rem-calc(-5px);
+      z-index: 10;
+    }
+  }
 }
