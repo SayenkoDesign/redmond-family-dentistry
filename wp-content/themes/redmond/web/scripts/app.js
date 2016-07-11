@@ -7,6 +7,11 @@ jQuery(function() {
         responsive: [{
             breakpoint: 700,
             settings: {
+              slidesToShow: 1
+            }
+        }, {
+            breakpoint: 1024,
+                settings: {
                 slidesToShow: 2
             }
         }]
