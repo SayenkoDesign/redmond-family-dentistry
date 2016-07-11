@@ -2,4 +2,7 @@
 .title-section {
   margin-bottom: rem-calc(45px);
   padding: 0 rem-calc(40px);
+  p {
+    color: $secondary-color;
+  }
 }
