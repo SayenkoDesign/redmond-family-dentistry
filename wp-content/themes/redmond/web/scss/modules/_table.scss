@@ -1,11 +1,17 @@
 // why choose us section in home page
 .comparison-table {
+  padding: rem-calc(40px);
+  table {
+    border: 1px $secondary-color solid;
+    text-align: center;
+  }
   th {
     background-color: $primary-dark-color;
     color: $primary-light-color;
     text-transform: uppercase;
     text-align: center;
     position: relative;
+    padding: rem-calc(15px);
     &:nth-child(2) {
       padding-right: rem-calc(40px);
     }
@@ -14,17 +20,35 @@
     }
     .vs {
       color: $secondary-dark-color;
-      height: 65px;
-      width: 65px;
+      font-family: serif;
+      font-size: rem-calc(22px);
+      height: rem-calc(75px);
+      width: rem-calc(75px);
       text-align: center;
-      vertical-align: middle;
+      padding: rem-calc(22px);
       border-radius: 50%;
       border: 2px $secondary-dark-color solid;
       background: $white;
       position: absolute;
-      right: rem-calc(-40px);
+      right: rem-calc(-50px);
       top: rem-calc(-5px);
       z-index: 10;
+      @include breakpoint(large) {
+        top: rem-calc(-10px);
+      }
+    }
+  }
+  tr {
+    td:nth-child(2) > i {
+      color: $primary-dark-color;
+    }
+    td:nth-child(3) {
+      text-align: left;
+      padding-left: 10%;
+      i {
+        color: #ed1c24;
+        margin-right: rem-calc(5px);
+      }
     }
   }
 }
