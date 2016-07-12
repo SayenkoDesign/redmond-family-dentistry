@@ -12,11 +12,13 @@
     text-align: center;
     position: relative;
     padding: rem-calc(15px);
+    font-weight: normal;
     &:nth-child(2) {
       padding-right: rem-calc(40px);
     }
     &:nth-child(3) {
       background-color: $secondary-dark-color;
+      font-weight: bold;
     }
     .vs {
       color: $secondary-dark-color;
@@ -39,12 +41,16 @@
     }
   }
   tr {
+    td:nth-child(1) {
+      border-right: 1px $secondary-color solid;
+    }
     td:nth-child(2) > i {
       color: $primary-dark-color;
     }
     td:nth-child(3) {
       text-align: left;
       padding-left: 10%;
+      border-left: 1px $secondary-color solid;
       i {
         color: #ed1c24;
         margin-right: rem-calc(5px);
