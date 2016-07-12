@@ -14,8 +14,8 @@
                 {% for row in SP.ACF.get_sub_field('table') %}
                     <tr>
                         <td>{{ row.comparison_text }}</td>
-                        <td><i class="fa fa-check"></i></td>
-                        <td><i class="fa fa-cross"></i>{{ row.typical_dentist_text }}</td>
+                        <td><i class="fa fa-check-circle"></i></td>
+                        <td><i class="fa fa-times-circle"></i>{{ row.typical_dentist_text }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
