@@ -1,8 +1,9 @@
 // yelp section on home page
 .reviews-slider {
-  padding: rem-calc(65px) rem-calc(40px) rem-calc(95px) rem-calc(40px);
+  background: $secondary-dark-color;
+  padding: rem-calc(65px) 0 rem-calc(95px) 0;
   img.logo {
-    margin: 0 auto;
+    margin: 0 auto rem-calc(15px) auto;
   }
   blockquote {
     border-left: none;
@@ -42,7 +43,64 @@
   .slick-dotted.slick-slider {
     margin-bottom: rem-calc(12px);
   }
+  .sick-arrow {
+    display: none;
+  }
   .slick-dots {
-    bottom: 0;
+    bottom: rem-calc(56px);
+    display: block;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+
+    li {
+      position: relative;
+      display: inline-block;
+      width: rem-calc(32px);
+      height: rem-calc(8px);
+      margin: 0 rem-calc(5px);
+      padding: 0;
+      cursor: pointer;
+    }
+
+    li button {
+      border: 0;
+      background: transparent;
+      display: block;
+      width: rem-calc(32px);
+      height: rem-calc(8px);
+      outline: none;
+      line-height: 0;
+      font-size: 0;
+      color: transparent;
+      padding: rem-calc(5px);
+      cursor: pointer;
+    }
+
+    li button:hover:before,
+    li button:focus:before {
+      opacity: .6;
+    }
+
+    li button:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem-calc(32px);
+      height: rem-calc(8px);
+      font-size: 0;
+      text-align: center;
+      background-color: $white;
+      opacity: 0.25;
+    }
+
+    li.slick-active button:before {
+      color: $white;
+      opacity: 1;
+    }
+
+    li.alick-active button:hover:before {
+      opacity: 1;
+    }
   }
 }
