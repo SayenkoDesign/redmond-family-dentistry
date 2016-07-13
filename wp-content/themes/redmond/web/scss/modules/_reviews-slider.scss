@@ -1,6 +1,45 @@
 // yelp section on home page
 .reviews-slider {
   background: $secondary-dark-color;
+  padding: rem-calc(65px) rem-calc(40px) rem-calc(95px) rem-calc(40px);
+  img.logo {
+    margin: 0 auto;
+  }
+  blockquote {
+    border-left: none;
+    text-align: center;
+    p {
+      color: $secondary-light-color;
+      font-family: serif;
+      font-style: italic;
+      font-size: rem-calc(26px);
+      &::before {
+        content: "";
+        width: rem-calc(42px);
+        height: rem-calc(31px);
+        background-image: url("../images/left-quotation.png");
+        margin-right: rem-calc(15px);
+        position:relative;
+        display:inline-block;
+        vertical-align:top;
+      }
+      &::after {
+        content: "";
+        width: rem-calc(42px);
+        height: rem-calc(31px);
+        background-image: url("../images/right-quotation.png");
+        margin-left: rem-calc(15px);
+        position:relative;
+        display:inline-block;
+        vertical-align:top;
+      }
+    }
+  }
+  cite {
+    text-align: center;
+    color: $primary-dark-color;
+    font-size: rem-calc(21px);
+  }
   .slick-dotted.slick-slider {
     margin-bottom: rem-calc(12px);
   }
