@@ -2,7 +2,7 @@
 .comparison-table {
   padding: rem-calc(40px);
   table {
-    border: 1px $secondary-color solid;
+    border: 1px $secondary-dark-color solid;
     text-align: center;
   }
   th {
@@ -19,6 +19,7 @@
     &:nth-child(3) {
       background-color: $secondary-dark-color;
       font-weight: bold;
+      padding-left: rem-calc(50px);
     }
     .vs {
       color: $secondary-dark-color;
@@ -29,7 +30,7 @@
       text-align: center;
       padding: rem-calc(22px);
       border-radius: 50%;
-      border: 2px $secondary-dark-color solid;
+      border: 2px $secondary-color solid;
       background: $white;
       position: absolute;
       right: rem-calc(-50px);
