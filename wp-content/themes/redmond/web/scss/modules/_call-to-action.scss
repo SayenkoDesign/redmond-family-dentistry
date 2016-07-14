@@ -12,6 +12,7 @@
   }
   .heading {
     padding-bottom: rem-calc(20px);
+    line-height: 70px;
     text-transform: uppercase;
     position: relative;
     color: $secondary-light-color;
@@ -19,6 +20,7 @@
     @include breakpoint(large) {
       display: inline-block;
       padding-right: rem-calc(15px);
+      padding-bottom: 0;
     }
   }
   .action {
