@@ -12,7 +12,7 @@
   }
   .heading {
     padding-bottom: rem-calc(20px);
-    line-height: 70px;
+    line-height: rem-calc(70px);
     text-transform: uppercase;
     position: relative;
     color: $secondary-light-color;
