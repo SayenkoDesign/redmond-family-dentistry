@@ -8,7 +8,6 @@
   }
   .row {
     position: relative;
-    vertical-align: middle;
   }
   .heading {
     padding-bottom: rem-calc(20px);
@@ -30,6 +29,9 @@
   }
   .button {
     margin-bottom: 0;
+    position: absolute;
+    transform: translateY(-25%);
+    right: 0;
     &:hover {
       text-decoration: none;
     }
