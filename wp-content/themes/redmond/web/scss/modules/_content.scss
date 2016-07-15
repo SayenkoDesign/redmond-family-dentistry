@@ -1,4 +1,5 @@
 // plain row of content
-.content {
-
+.generic_content {
+  padding: rem-calc(15px) rem-calc(40px);
+  color: $secondary-color;
 }
