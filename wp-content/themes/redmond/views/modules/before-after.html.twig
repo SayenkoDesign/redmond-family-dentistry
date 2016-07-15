@@ -1,6 +1,6 @@
 <section class="before-after">
     <div class="row column">
-        <div class="slick">
+        <div class="slick before-after-slider">
             {% for slide in SP.ACF.get_sub_field('images') %}
                 <img src="{{ slide.before.sizes.beforeafter }}" alt="">
                 <img src="{{ slide.after.sizes.beforeafter }}" alt="">

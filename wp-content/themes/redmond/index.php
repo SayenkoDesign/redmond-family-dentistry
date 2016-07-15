@@ -34,6 +34,9 @@ while(have_rows('content')) {
         case 'before_after_slider':
             $flexibleContent[] = $twig->render('modules/before-after.html.twig', $data);
             break;
+        case 'generic_content':
+            $flexibleContent[] = $twig->render('modules/content.html.twig', $data);
+            break;
         default:
             throw new Exception('Could not render layout for '.$layout);
             break;

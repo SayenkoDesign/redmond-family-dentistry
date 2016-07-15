@@ -19,4 +19,9 @@ jQuery(function() {
         slidesToShow: 1,
         dots: true
     });
+    jQuery('.before-after-slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: true
+    });
 });
