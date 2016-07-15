@@ -40,6 +40,41 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   .slick-slide {
     height: auto;
+    margin-right: rem-calc(12px);
+  }
+  .slick-arrow {
+    height: auto;
+    width: auto;
+  }
+  .slick-next {
+    @include breakpoint(large) {
+      right:rem-calc(-45px);
+    }
+    &:before {
+      content: "\f105";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-size: rem-calc(45px);
+      color: $primary-color;
+      @include breakpoint(large) {
+        font-size: rem-calc(75px);
+      }
+    }
+  }
+  .slick-prev {
+    @include breakpoint(large) {
+      left: rem-calc(-45px);
+    }
+    &:before {
+      content: "\f104";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-size: rem-calc(45px);
+      color: $primary-color;
+      @include breakpoint(large) {
+        font-size: rem-calc(75px);
+      }
+    }
   }
 }
 

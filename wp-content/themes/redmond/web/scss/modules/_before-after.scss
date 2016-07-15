@@ -1,3 +1,11 @@
 .before-after {
-
+  padding: rem-calc(80px) rem-calc(40px);
+  .slick-dots {
+    bottom: rem-calc(-60px);
+    li button:before {
+      content: "\25cf";
+      font-size: rem-calc(28px);
+      color: $primary-dark-color;
+    }
+  }
 }
