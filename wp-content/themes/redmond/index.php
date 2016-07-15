@@ -11,8 +11,13 @@ while(have_rows('content')) {
     the_row();
     switch($layout = get_row_layout()) {
         case 'large_header':
-            $flexibleContent[] = $twig->render('modules/large-header.html.twig', $data);
-            break;
+           $data['header_layout'] = "large";
+           $flexibleContent[] = $twig->render('modules/hero-header.html.twig', $data);
+           break;
+        case 'small_header':
+           $data['header_layout'] = "small";
+           $flexibleContent[] = $twig->render('modules/hero-header.html.twig', $data);
+           break;
         case 'title_section':
             $flexibleContent[] = $twig->render('modules/title-section.html.twig', $data);
             break;

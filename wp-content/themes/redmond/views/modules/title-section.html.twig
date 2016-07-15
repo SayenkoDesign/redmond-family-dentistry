@@ -1,6 +1,9 @@
 <section class="title-section">
     <div class="row">
         <div class="medium-4 columns large-2 columns">
+            {% if SP.ACF.get_sub_field('icon') %}
+                <img src="{{ SP.ACF.get_sub_field('icon') }}" alt="" />
+            {% endif %}
             <h2><small>{{ SP.ACF.get_sub_field('small_heading') }}</small> {{ SP.ACF.get_sub_field('large_heading') }}</h2>
         </div>
         <div class="medium-8 columns large-10 columns">

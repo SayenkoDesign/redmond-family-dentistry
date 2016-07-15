@@ -1,13 +1,13 @@
 // page headers
 .hero-header {
+  color: $primary-light-color;
+  background-repeat: no-repeat;
+  background-size: cover;
   &.small{
-
+    padding: rem-calc(60px);
   }
   &.large {
     padding: rem-calc(170px) 0;
-    color: $primary-light-color;
-    background-repeat: no-repeat;
-    background-size: cover;
     a {
       font-size: rem-calc(15px);
       &:hover {
@@ -15,8 +15,4 @@
       }
     }
   }
-}
-
-.button {
-  text-transform: uppercase;
 }
