@@ -4,7 +4,7 @@
   .top-row {
     border-bottom: 1px $primary-light-color solid;
     margin-bottom: rem-calc(20px);
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       padding: 0 rem-calc(75px);
     }
     img.footer-icon {
@@ -24,5 +24,27 @@
         font-size: rem-calc(16px);
       }
     }
+    img.logo {
+      max-width: 150px;
+      margin-bottom: rem-calc(28px);
+    }
+  }
+  .facebook, .twitter, .pinterest, .google_plus {
+    width: rem-calc(28px);
+    height: rem-calc(28px);
+    border-radius: rem-calc(14px);
+    background-color: #b8bfc2;
+    text-align: center;
+    display: inline-block;
+    margin-right: rem-calc(6px);
+    & i {
+      color: $white;
+      line-height: rem-calc(28px);
+      font-size: rem-calc(16px);
+    }
+  }
+  .bottom-row {
+    text-align: center;
+    font-size: rem-calc(16px);
   }
 }
