@@ -1,3 +1,23 @@
 <footer class="footer">
-
+    <div class="row top-row">
+        {% for column in SP.ACF.get_field('footer_icons', 'option') %}
+            <div class="large-4 columns icon-title">
+                <a href="#"><img class="footer-icon" src="{{ column.icon.url }}" /></a>
+                <h2><small>{{ column.small_header }}</small> {{ column.large_header }}</h2>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        {% for column in SP.ACF.get_field('footer_list', 'option') %}
+            <div class="column large-3 medium-3 small-6">
+                <h2>{{ column.title }}</h2>
+            </div>
+        {% endfor %}
+        <div class="column large-3 medium-3 small-6 medium-pull-8 large-pull-8">
+            <img src="{{ SP.ACF.get_field('logo', 'option').url }}" alt="" />
+            {% if SP.ACF.get_field('facebook', 'option') %}
+                <a class="facebook" href="{{ SP.ACF.get_field('facebook') }}"></a>
+            {% endif %}
+        </div>
+    </div>
 </footer>
