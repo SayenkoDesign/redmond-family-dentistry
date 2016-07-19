@@ -574,3 +574,10 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
+
+// 37. Footer
+// -----------
+
+$footer-social-background: #b8bfc2;
+$footer-social-background-hover: scale-color($footer-social-background, $lightness: 15%);
+$footer-icons-border: 1px $footer-social-background solid;
