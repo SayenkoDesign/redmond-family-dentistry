@@ -2,34 +2,46 @@
     <div class="footer-icons">
         <div class="row">
             {% for column in SP.ACF.get_field('footer_icons', 'option') %}
-                <div class="medium-4 columns icon-title">
-                    <a href="#"><img class="footer-icon" src="{{ column.icon.url }}" /></a>
-                    <h2><small>{{ column.small_header }}</small> {{ column.large_header }}</h2>
+                <div class="medium-4 columns">
+                    <div class="icon-title">
+                        <a href="#"><img class="footer-icon" src="{{ column.icon.url }}" /></a>
+                        <h2><small>{{ column.small_header }}</small> {{ column.large_header }}</h2>
+                    </div>
                 </div>
             {% endfor %}
         </div>
     </div>
-    <div class="row footer-content">
-        {% for column in SP.ACF.get_field('footer_list', 'option') %}
-            <div class="column {% if loop.index == 1 %}hide-for-small-only medium-3 medium-push-3{% endif %}{% if loop.index == 2 %}hide-for-small-only medium-3 medium-push-3{% endif %}{% if loop.index == 3 %}small-6 medium-3 medium-push-3{% endif %}">
-                <h2>{{ column.title }}</h2>
-            </div>
-        {% endfor %}
-        <div class="column medium-3 small-6 medium-pull-9 text-center">
-            <img class="logo" src="{{ SP.ACF.get_field('logo', 'option').url }}" alt="" />
-            <div class="row">
-                {% if SP.ACF.get_field('facebook', 'option') %}
-                    <a href="{{ SP.ACF.get_field('facebook') }}" target="_blank"><div class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>
-                {% endif %}
-                {% if SP.ACF.get_field('twitter', 'option') %}
-                    <a href="{{ SP.ACF.get_field('twitter') }}" target="_blank"><div class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>
-                {% endif %}
-                {% if SP.ACF.get_field('pinterest', 'option') %}
-                    <a href="{{ SP.ACF.get_field('pinterest') }}" target="_blank"><div class="pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></div></a>
-                {% endif %}
-                {% if SP.ACF.get_field('google_plus', 'option') %}
-                    <a href="{{ SP.ACF.get_field('google_plus') }}" target="_blank"><div class="google_plus"><i class="fa fa-google-plus" aria-hidden="true"></i></div></a>
-                {% endif %}
+    <div class="footer-content">
+        <div class="row">
+            {% for column in SP.ACF.get_field('footer_list', 'option') %}
+                <div class="column
+                    {% if loop.index == 1 %}
+                        hide-for-small-only medium-3 medium-push-3
+                    {% elseif loop.index == 2 %}
+                        hide-for-small-only medium-3 medium-push-3
+                    {% elseif loop.index == 3 %}
+                        small-6 medium-3 medium-push-3
+                    {% endif %}
+                    ">
+                    <h2>{{ column.title }}</h2>
+                </div>
+            {% endfor %}
+            <div class="column medium-3 medium-pull-9 text-center">
+                <img class="logo" src="{{ SP.ACF.get_field('logo', 'option').url }}" alt="" />
+                <div class="row">
+                    {% if SP.ACF.get_field('facebook', 'option') %}
+                        <a href="{{ SP.ACF.get_field('facebook') }}" target="_blank"><div class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>
+                    {% endif %}
+                    {% if SP.ACF.get_field('twitter', 'option') %}
+                        <a href="{{ SP.ACF.get_field('twitter') }}" target="_blank"><div class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></div></a>
+                    {% endif %}
+                    {% if SP.ACF.get_field('pinterest', 'option') %}
+                        <a href="{{ SP.ACF.get_field('pinterest') }}" target="_blank"><div class="pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></div></a>
+                    {% endif %}
+                    {% if SP.ACF.get_field('google_plus', 'option') %}
+                        <a href="{{ SP.ACF.get_field('google_plus') }}" target="_blank"><div class="google_plus"><i class="fa fa-google-plus" aria-hidden="true"></i></div></a>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>

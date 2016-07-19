@@ -4,7 +4,7 @@
   color: $primary-light-color;
   h2 {
     color: $primary-light-color;
-    font-family: 'Lato', sans-serif;
+    font-family: $body-font-family;
     font-size: rem-calc(19px);
     font-weight: normal;
     & small {
@@ -15,7 +15,7 @@
     }
   }
   .footer-icons {
-    border-bottom: 1px #b8bfc2 solid;
+    border-bottom: $footer-icons-border;
     margin-bottom: rem-calc(20px);
     @include breakpoint(large) {
       padding: 0 rem-calc(75px);
@@ -38,11 +38,14 @@
     width: rem-calc(28px);
     height: rem-calc(28px);
     border-radius: rem-calc(14px);
-    background-color: #b8bfc2;
+    background-color: $footer-social-background;
     text-align: center;
     display: inline-block;
     margin-right: rem-calc(6px);
     margin-bottom: rem-calc(6px);
+    &:hover {
+      background-color: $footer-social-background-hover;
+    }
     & i {
       color: $white;
       line-height: rem-calc(30px);
