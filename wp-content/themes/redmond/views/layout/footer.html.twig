@@ -28,7 +28,7 @@
             {% endfor %}
             <div class="column medium-3 medium-pull-9 text-center">
                 <img class="logo" src="{{ SP.ACF.get_field('logo', 'option').url }}" alt="" />
-                <div class="row">
+                <div class="row column">
                     {% if SP.ACF.get_field('facebook', 'option') %}
                         <a href="{{ SP.ACF.get_field('facebook') }}" target="_blank"><div class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></div></a>
                     {% endif %}
