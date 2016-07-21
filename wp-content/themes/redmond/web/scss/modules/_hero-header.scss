@@ -1,13 +1,16 @@
 // page headers
 .hero-header {
-  color: $primary-light-color;
+  color: $hero-header-color;
   background-repeat: no-repeat;
   background-size: cover;
+  & h1, p {
+    font-family: $large-header-font-family;
+  }
   &.small{
     padding: rem-calc(60px);
   }
   &.large {
-    padding: rem-calc(170px) 0;
+    padding: rem-calc(180px) 0;
     a {
       font-size: rem-calc(15px);
       &:hover {
