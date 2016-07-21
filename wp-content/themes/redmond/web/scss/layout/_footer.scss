@@ -54,6 +54,12 @@
   }
   .copyright {
     text-align: center;
-    font-size: rem-calc(16px);
+    font-size: rem-calc(14px);
+    a {
+      text-decoration: underline;
+    }
+    p {
+      margin-bottom: 0;
+    }
   }
 }
