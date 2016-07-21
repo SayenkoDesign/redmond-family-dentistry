@@ -17,11 +17,13 @@ jQuery(function() {
     });
     jQuery('.reviews-slider').slick({
         slidesToShow: 1,
-        dots: true
+        dots: true,
+        arrows: false
     });
     jQuery('.before-after-slider').slick({
         slidesToShow: 2,
         slidesToScroll: 2,
-        dots: true
+        dots: true,
+        arrows: false
     });
 });
