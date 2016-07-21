@@ -2,11 +2,9 @@
     <div class="footer-icons">
         <div class="row">
             {% for column in SP.ACF.get_field('footer_icons', 'option') %}
-                <div class="medium-4 columns">
-                    <div class="icon-title">
-                        <a href="#"><img class="footer-icon" src="{{ column.icon.url }}" /></a>
-                        <h2><small>{{ column.small_header }}</small> {{ column.large_header }}</h2>
-                    </div>
+                <div class="icon-title">
+                    <a href="#"><img class="footer-icon" src="{{ column.icon.url }}" /></a>
+                    <h2><small>{{ column.small_header }}</small> {{ column.large_header }}</h2>
                 </div>
             {% endfor %}
         </div>

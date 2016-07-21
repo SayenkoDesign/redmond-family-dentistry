@@ -1,33 +1,38 @@
 .footer {
   background-color: $secondary-color;
   padding: rem-calc(36px) rem-calc(80px);
-  color: $primary-light-color;
+  padding-top: 0;
+  color: $white;
   h2 {
     color: $primary-light-color;
     font-family: $body-font-family;
-    font-size: rem-calc(19px);
+    font-size: rem-calc(21px);
     font-weight: normal;
     & small {
       color: $primary-light-color;
       font-style: normal;
       text-transform: uppercase;
-      font-size: rem-calc(16px);
+      font-size: rem-calc(14px);
     }
   }
   .footer-icons {
-    border-bottom: $footer-icons-border;
     margin-bottom: rem-calc(20px);
-    @include breakpoint(large) {
-      padding: 0 rem-calc(75px);
+    text-align: center;
+    .row {
+      border-bottom: $footer-icons-border;
+    }
+    .icon-title {
+      margin: rem-calc(30px) auto;
+      text-align: left;
+      @include breakpoint(medium) {
+        margin: rem-calc(30px) rem-calc(15px);
+      }
     }
     img.footer-icon {
       margin-top: rem-calc(12px);
     }
   }
   .footer-content {
-    .icon-title {
-      margin-bottom: rem-calc(15px);
-    }
     img.logo {
       width: 100%;
       max-width: 250px;
