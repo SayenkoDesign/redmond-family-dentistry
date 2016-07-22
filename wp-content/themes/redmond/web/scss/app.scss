@@ -44,7 +44,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   .slick-slide {
     height: auto;
-    margin-right: rem-calc(12px);
   }
   .slick-arrow {
     height: auto;
@@ -82,13 +81,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.slick-dotted.slick-slider {
+  margin-bottom: rem-calc(9px);
+}
+
 .icon-title {
   margin-bottom: rem-calc(30px);
+  display: inline-block;
   img {
     float: left;
     margin-right: rem-calc(10px);
   }
+  h2 {
+    display: inline-block;
+  }
 }
+
 ul.menu {
   position: relative;
   li a {

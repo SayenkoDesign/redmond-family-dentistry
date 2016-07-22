@@ -1,18 +1,29 @@
 // page headers
 .hero-header {
-  color: $primary-light-color;
+  color: $hero-header-color;
   background-repeat: no-repeat;
   background-size: cover;
+  h1 {
+    font-family: $large-header-font-family;
+  }
   &.small{
     padding: rem-calc(60px);
   }
   &.large {
-    padding: rem-calc(170px) 0;
+    padding: rem-calc(180px) 0;
+    h1 {
+      font-size: rem-calc(60px);
+      text-transform: none;
+    }
     a {
       font-size: rem-calc(15px);
       &:hover {
         text-decoration: none;
       }
     }
+  }
+  .button {
+    margin-bottom: 0;
+    padding: rem-calc(20px) rem-calc(40px);
   }
 }

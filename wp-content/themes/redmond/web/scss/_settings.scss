@@ -63,6 +63,7 @@ $primary-dark-color: map-get($foundation-palette, primary-dark);
 $primary-light-color: map-get($foundation-palette, primary-light);
 $secondary-light-color: map-get($foundation-palette, secondary-light);
 $secondary-dark-color: map-get($foundation-palette, secondary-dark);
+$why-choose-us-color: #f0f1f1;
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
@@ -111,10 +112,12 @@ $block-grid-max: 8;
 // ------------------
 
 $fa-font-path: "../libs/font-awesome/fonts";
-$header-font-family: 'PT Serif', serif;;
+$header-font-family: 'PT Serif', serif;
+$large-header-font-family: 'Goudy Bookletter 1911', serif;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $header-font-weight: bold;
+$hero-header-color: #eef0ed;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
@@ -510,7 +513,7 @@ $table-hover-scale: 2%;
 $table-row-hover: darken($table-background, $table-hover-scale);
 $table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
 $table-striped-background: smart-scale($table-background, $table-color-scale);
-$table-stripe: even;
+$table-stripe: odd;
 $table-head-background: smart-scale($table-background, $table-color-scale / 2);
 $table-foot-background: smart-scale($table-background, $table-color-scale);
 $table-head-font-color: $body-font-color;
@@ -574,3 +577,10 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
+
+// 37. Footer
+// -----------
+
+$footer-social-background: #b8bfc2;
+$footer-social-background-hover: scale-color($footer-social-background, $lightness: 15%);
+$footer-icons-border: 1px $footer-social-background solid;

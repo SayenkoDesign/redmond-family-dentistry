@@ -1,7 +1,9 @@
 // yelp section on home page
 .reviews-slider {
-  background: $secondary-dark-color;
-  padding: rem-calc(65px) 0 rem-calc(95px) 0;
+  .slick-slide-inner {
+    padding: rem-calc(65px) 0 rem-calc(95px) 0;
+    background-size: cover;
+  }
   img.logo {
     margin: 0 auto rem-calc(15px) auto;
   }
@@ -39,6 +41,10 @@
     text-align: center;
     color: $primary-dark-color;
     font-size: rem-calc(21px);
+    &:before {
+      content: '\007E';
+      margin-right: rem-calc(4px);
+    }
   }
   .slick-dotted.slick-slider {
     margin-bottom: rem-calc(12px);

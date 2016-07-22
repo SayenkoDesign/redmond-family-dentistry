@@ -1,3 +1,88 @@
 .footer {
-
+  background-color: $secondary-color;
+  padding: rem-calc(36px) rem-calc(80px);
+  padding-top: 0;
+  color: $white;
+  h2 {
+    color: $primary-light-color;
+    font-family: $body-font-family;
+    font-size: rem-calc(21px);
+    font-weight: normal;
+    & small {
+      color: $primary-light-color;
+      font-style: normal;
+      text-transform: uppercase;
+      font-size: rem-calc(14px);
+    }
+  }
+  .footer-icons {
+    margin-bottom: rem-calc(20px);
+    text-align: center;
+    .row {
+      border-bottom: $footer-icons-border;
+    }
+    .icon-title {
+      margin: rem-calc(30px) auto;
+      text-align: left;
+      @include breakpoint(medium) {
+        margin: rem-calc(30px) rem-calc(15px);
+      }
+      .footer-icon {
+        float: left;
+        width: rem-calc(60px);
+        height: rem-calc(60px);
+        background: $primary-dark-color;
+        border-radius: 50%;
+        margin-top: rem-calc(12px);
+        margin-right: rem-calc(12px);
+        position: relative;
+        &:hover {
+          background: $primary-color;
+        }
+        img {
+          position: absolute;
+          margin: auto;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+  .footer-content {
+    img.logo {
+      width: 100%;
+      max-width: 250px;
+      margin-bottom: rem-calc(28px);
+    }
+  }
+  .facebook, .twitter, .pinterest, .google_plus {
+    width: rem-calc(28px);
+    height: rem-calc(28px);
+    border-radius: rem-calc(14px);
+    background-color: $footer-social-background;
+    text-align: center;
+    display: inline-block;
+    margin-right: rem-calc(6px);
+    margin-bottom: rem-calc(6px);
+    &:hover {
+      background-color: $footer-social-background-hover;
+    }
+    & i {
+      color: $white;
+      line-height: rem-calc(30px);
+      font-size: rem-calc(16px);
+    }
+  }
+  .copyright {
+    text-align: center;
+    font-size: rem-calc(14px);
+    a {
+      text-decoration: underline;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
 }
