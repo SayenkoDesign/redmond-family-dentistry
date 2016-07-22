@@ -59,6 +59,8 @@ h1, h2, h3, h4, h5, h6 {
       font-style: normal;
       font-size: rem-calc(45px);
       color: $primary-color;
+      position: relative;
+      top: -2;
       @include breakpoint(large) {
         font-size: rem-calc(75px);
       }
@@ -74,6 +76,8 @@ h1, h2, h3, h4, h5, h6 {
       font-style: normal;
       font-size: rem-calc(45px);
       color: $primary-color;
+      position: relative;
+      top: -2;
       @include breakpoint(large) {
         font-size: rem-calc(75px);
       }
