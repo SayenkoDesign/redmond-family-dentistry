@@ -1,6 +1,9 @@
 // yelp section on home page
 .reviews-slider {
-  padding: rem-calc(65px) 0 rem-calc(95px) 0;
+  .slick-slide-inner {
+    padding: rem-calc(65px) 0 rem-calc(95px) 0;
+    background-size: cover;
+  }
   img.logo {
     margin: 0 auto rem-calc(15px) auto;
   }
