@@ -15,6 +15,10 @@
     position: relative;
     color: $secondary-light-color;
     font-size: rem-calc(26px);
+    max-width: 75%;
+    @include breakpoint(medium only) {
+      width: 65%;
+    }
     @include breakpoint(large) {
       display: inline-block;
       padding-right: rem-calc(15px);
@@ -29,9 +33,12 @@
   }
   .button {
     margin-bottom: 0;
-    position: absolute;
-    transform: translateY(-25%);
-    right: 0;
+    @include breakpoint(medium) {
+      position: absolute;
+      transform: translateY(-50%);
+      right: 0;
+      top: 50%;
+    }
     &:hover {
       text-decoration: none;
     }
