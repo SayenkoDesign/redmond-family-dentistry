@@ -1,11 +1,26 @@
 // yelp section on home page
 .reviews-slider {
-  .slick-slide-inner {
+  .slide {
     padding: rem-calc(65px) 0 rem-calc(95px) 0;
     background-size: cover;
+    position: relative;
   }
-  img.logo {
+  .background {
+    max-width: none;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .content {
+    position: relative;
+  }
+  .logo {
     margin: 0 auto rem-calc(15px) auto;
+    @include breakpoint(small only) {
+      display: none;
+    }
   }
   blockquote {
     border-left: none;
@@ -14,7 +29,7 @@
       color: $secondary-light-color;
       font-family: serif;
       font-style: italic;
-      font-size: rem-calc(26px);
+      font-size: rem-calc(20px);
       &::before {
         content: "";
         width: rem-calc(42px);
@@ -34,6 +49,12 @@
         position:relative;
         display:inline-block;
         vertical-align:top;
+        @include breakpoint(small only) {
+          display: none;
+        }
+      }
+      @include breakpoint(large) {
+        font-size: rem-calc(26px);
       }
     }
   }

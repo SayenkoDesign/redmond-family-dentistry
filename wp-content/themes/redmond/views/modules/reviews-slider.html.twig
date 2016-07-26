@@ -2,14 +2,15 @@
 <section class="reviews">
     <div class="slick reviews-slider">
         {% for testimony in SP.ACF.get_sub_field('testimonies') %}
-        <div>
-
-                <div class="slick-slide-inner" style="background-image: url({{ testimony.background.url }});">
+        <div class="slide">
+            <img src="{{ testimony.background.url }}" class="background">
+            <div class="row content">
+                <div class="large-12 columns slick-slide-inner">
                     <img src="{{ testimony.logo.url }}" class="logo">
                     <blockquote>{{ testimony.testimony }}</blockquote>
                     <cite>{{ testimony.testimony_author }}</cite>
                 </div>
-
+            </div>
         </div>
         {% endfor %}
     </div>
