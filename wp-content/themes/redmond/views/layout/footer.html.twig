@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="footer-icons">
-        <div class="row">
+        <div class="row column">
             {% for column in SP.ACF.get_field('footer_icons', 'option') %}
                 <div class="icon-title">
                     <div class="footer-icon">
@@ -45,7 +45,7 @@
             </div>
         </div>
     </div>
-    <div class="row copyright column">
+    <div class="copyright row column">
         {{ SP.ACF.get_field('copyright', 'option') }}
     </div>
 </footer>

@@ -1,6 +1,5 @@
 .footer {
   background-color: $secondary-color;
-  padding: rem-calc(36px) rem-calc(80px);
   padding-top: 0;
   color: $white;
   h2 {
@@ -78,6 +77,7 @@
   .copyright {
     text-align: center;
     font-size: rem-calc(14px);
+    padding-bottom: rem-calc(14px);
     a {
       text-decoration: underline;
     }
