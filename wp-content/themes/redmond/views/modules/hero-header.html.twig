@@ -1,5 +1,5 @@
 <section class="hero-header  {% if header_layout == 'large' %}large{% elseif header_layout == 'small' %}small{% endif %}" style="background-image: url({{ SP.ACF.get_sub_field('background_image').url }})">
-    <div class=" text-center">
+    <div class="row column text-center">
         <h1>{{ SP.ACF.get_sub_field('heading') }}</h1>
         {% if SP.ACF.get_sub_field('subtitle') %}
             <p>{{ SP.ACF.get_sub_field('subtitle') }}</p>

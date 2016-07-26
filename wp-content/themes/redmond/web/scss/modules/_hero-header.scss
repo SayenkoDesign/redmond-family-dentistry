@@ -3,27 +3,40 @@
   color: $hero-header-color;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: rem-calc(60px) 0;
+  &.large {
+    @include breakpoint(large) {
+      padding: rem-calc(180px) 0;
+    }
+  }
+
   h1 {
     font-family: $large-header-font-family;
   }
-  &.small{
-    padding: rem-calc(60px);
-  }
-  &.large {
-    padding: rem-calc(180px) 0;
-    h1 {
-      font-size: rem-calc(60px);
+  &.large h1 {
+      font-size: rem-calc(36px);
       text-transform: none;
-    }
-    a {
-      font-size: rem-calc(15px);
-      &:hover {
-        text-decoration: none;
+      @include breakpoint(large) {
+        font-size: rem-calc(60px);
+        margin: 0;
       }
+  }
+  p {
+    font-size: rem-calc(20px);
+    @include breakpoint(large) {
+      font-size: rem-calc(28px);
     }
   }
-  .button {
+
+  a.button {
+    font-size: rem-calc(12px);
     margin-bottom: 0;
     padding: rem-calc(20px) rem-calc(40px);
+    &:hover {
+      text-decoration: none;
+    }
+    @include breakpoint(large){
+      font-size: rem-calc(15px);
+    }
   }
 }
