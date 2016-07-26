@@ -6,6 +6,10 @@
   @include breakpoint(large) {
     text-align: left;
   }
+  &.alt {
+    background-color: $primary-light-color;
+  }
+
   .row {
     position: relative;
   }
@@ -25,6 +29,10 @@
       padding-bottom: 0;
     }
   }
+  &.alt .heading {
+    color: $body-font-color;
+  }
+
   .action {
     @include breakpoint(large) {
       display: inline-block;

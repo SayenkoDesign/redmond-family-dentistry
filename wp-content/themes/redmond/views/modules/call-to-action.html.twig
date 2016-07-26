@@ -1,7 +1,7 @@
 {# ready to schedule row in home page #}
-<section class="call-to-action">
+<section class="call-to-action {% if SP.ACF.get_sub_field('style') == "alt" %}alt{% endif %}">
     <div class="row">
         <div class="heading">{{ SP.ACF.get_sub_field('heading') }}</div>
-        <div class="action"><a href="{{ SP.WordPress.URL(SP.ACF.get_sub_field('button_url')) }}" class="primary button">{{ SP.ACF.get_sub_field('button_text') }}</a></div>
+        <div class="action"><a href="#appointment" class="appointment primary button">Request Now</a></div>
     </div>
 </section>
