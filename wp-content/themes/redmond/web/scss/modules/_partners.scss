@@ -1,10 +1,15 @@
 // we work with ppo providers section
 .partners {
   background: $primary-light-color;
-  padding: rem-calc(75px) rem-calc(40px) rem-calc(90px) rem-calc(40px);
+  padding: rem-calc(75px) 0 rem-calc(90px) 0;
   p {
     color: $secondary-color;
     margin-bottom: rem-calc(45px);
+  }
+  .partners-slider-wrapper {
+    @include breakpoint(small only){
+      padding: 0 1rem;
+    }
   }
   .slick-slider {
     width: 92%;
