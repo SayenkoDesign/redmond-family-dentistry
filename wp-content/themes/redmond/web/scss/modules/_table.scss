@@ -68,11 +68,13 @@
     }
     td:nth-child(1) {
       border-right: 1px $secondary-color solid;
+      text-align: left;
     }
     td:nth-child(2) > i {
       color: $primary-dark-color;
     }
     td:nth-child(3) {
+      position: relative;
       border-left: 1px $secondary-color solid;
       font-size: rem-calc(18px);
       @include breakpoint(small only) {
@@ -82,13 +84,22 @@
         text-align: left;
         width: rem-calc(430px);
       }
-      i {
+      i.fa {
         color: #ed1c24;
         margin-right: rem-calc(5px);
-        @include breakpoint(small only) {
-          font-size: rem-calc(18px);
+        font-size: rem-calc(36px);
+        @include breakpoint(medium) {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
+      .content {
+        padding-left: rem-calc(40px);
+      }
+    }
+    i.fa {
+      font-size: rem-calc(36px);
     }
   }
 }
