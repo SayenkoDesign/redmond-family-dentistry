@@ -1,13 +1,21 @@
 // why choose us section in home page
 .comparison-table {
-  padding: rem-calc(40px);
+  padding: rem-calc(40px) 0;
   background: $why-choose-us-color;
   h2 {
     margin-bottom: rem-calc(40px);
   }
   table {
-    border: 1px $secondary-dark-color solid;
     text-align: center;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-width: 0;
+    outline: none;
+    font-size: rem-calc(16px);
+    @include breakpoint(medium) {
+      font-size: rem-calc(24px);
+    }
   }
   th {
     background-color: $primary-dark-color;
@@ -17,15 +25,22 @@
     position: relative;
     padding: rem-calc(15px);
     font-weight: normal;
-    font-size: rem-calc(26px);
+    font-size: rem-calc(16px);
     &:nth-child(2) {
-      padding-right: rem-calc(40px);
+      @include breakpoint(medium) {
+        padding-right: rem-calc(40px);
+      }
     }
     &:nth-child(3) {
       background-color: $secondary-dark-color;
       font-weight: bold;
-      padding-left: rem-calc(50px);
-      font-size: rem-calc(30px);
+      @include breakpoint(medium) {
+        padding-left: rem-calc(50px);
+        font-size: rem-calc(30px);
+      }
+    }
+    @include breakpoint(medium) {
+      font-size: rem-calc(26px);
     }
     .vs {
       color: $secondary-dark-color;
@@ -42,10 +57,12 @@
       right: rem-calc(-52px);
       top: rem-calc(-(20px));
       z-index: 10;
+      @include breakpoint(small only){
+        display: none;
+      }
     }
   }
   tr {
-    font-size: rem-calc(24px);
     td {
       padding: rem-calc(16px);
     }
@@ -56,15 +73,21 @@
       color: $primary-dark-color;
     }
     td:nth-child(3) {
-      text-align: left;
       border-left: 1px $secondary-color solid;
       font-size: rem-calc(18px);
+      @include breakpoint(small only) {
+        font-size: 0;
+      }
       @include breakpoint(medium) {
+        text-align: left;
         width: rem-calc(430px);
       }
       i {
         color: #ed1c24;
         margin-right: rem-calc(5px);
+        @include breakpoint(small only) {
+          font-size: rem-calc(18px);
+        }
       }
     }
   }
