@@ -12,6 +12,7 @@
     {% endblock %}
 </head>
 <body {{ SP.WordPress.classes()}}>
+<div class="page" data-sticky-container>
 {% block body %}
     {% block header %}
         {% include "layout/header.html.twig" %}
@@ -30,7 +31,7 @@
         {% include "layout/footer.html.twig" %}
     {% endblock %}
 {% endblock %}
-
+</div>
 {% block scripts %}
     {{ SP.WordPress.footer() }}
 {% endblock %}
