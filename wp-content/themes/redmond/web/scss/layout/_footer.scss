@@ -3,12 +3,12 @@
   padding-top: 0;
   color: $white;
   h2 {
-    color: $primary-light-color;
+    color: $white;
     font-family: $body-font-family;
     font-size: rem-calc(21px);
     font-weight: normal;
     & small {
-      color: $primary-light-color;
+      color: $white;
       font-style: normal;
       text-transform: uppercase;
       font-size: rem-calc(14px);
@@ -16,7 +16,9 @@
   }
   .footer-icons {
     margin-bottom: rem-calc(20px);
-    text-align: center;
+    @include breakpoint(medium) {
+      text-align: center;
+    }
     .row {
       border-bottom: $footer-icons-border;
     }
@@ -52,7 +54,7 @@
   .footer-content {
     img.logo {
       width: 100%;
-      max-width: 250px;
+      max-width: 150px;
       margin-bottom: rem-calc(28px);
     }
   }
@@ -74,10 +76,37 @@
       font-size: rem-calc(16px);
     }
   }
+  .widget_nav_menu {
+    .menu li {
+      display: block;
+      a {
+        font-size: rem-calc(15px);
+        color: $white;
+        padding: rem-calc(10px) 0;
+        &::before {
+          content: "";
+        }
+      }
+    }
+  }
+  .widget_text {
+    @include breakpoint(small only) {
+      margin-top: 1rem;
+    }
+  }
+  .textwidget {
+    font-size: rem-calc(15px);
+    li {
+      padding: rem-calc(10px) 0;
+      line-height: 1;
+    }
+  }
   .copyright {
-    text-align: center;
     font-size: rem-calc(14px);
     padding-bottom: rem-calc(14px);
+    @include breakpoint(medium) {
+      text-align: center;
+    }
     a {
       text-decoration: underline;
     }

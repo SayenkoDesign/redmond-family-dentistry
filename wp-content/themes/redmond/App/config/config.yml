@@ -18,6 +18,31 @@ parameters:
     - "html5"
     - "post-thumbnails"
   wordpress.translations: "%template_dir%/languages"
+  wordpress.sidebars:
+    -
+      id: "footer_1"
+      name: "Footer Left"
+      description: "Left Footer Menu"
+      before_widget: '<section id="%1$s" class="widget %2$s">'
+      after_widget: '</section>'
+      before_title: '<h2 class="widgettitle">'
+      after_title: '</h2>'
+    -
+      id: "footer_2"
+      name: "Footer Center"
+      description: "Center Footer Menu"
+      before_widget: '<section id="%1$s" class="widget %2$s">'
+      after_widget: '</section>'
+      before_title: '<h2 class="widgettitle">'
+      after_title: '</h2>'
+    -
+      id: "footer_3"
+      name: "Footer Right"
+      description: "Right Footer Menu"
+      before_widget: '<section id="%1$s" class="widget %2$s">'
+      after_widget: '</section>'
+      before_title: '<h2 class="widgettitle">'
+      after_title: '</h2>'
   wordpress.menus:
     desktop_menu: "Desktop Menu"
     mobile_menu: "Mobile Menu"
