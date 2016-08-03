@@ -48,6 +48,13 @@
           right: 0;
           bottom: 0;
         }
+        a {
+          &:hover {
+            img {
+              filter: brightness(115%);
+            }
+          }
+        }
       }
     }
   }

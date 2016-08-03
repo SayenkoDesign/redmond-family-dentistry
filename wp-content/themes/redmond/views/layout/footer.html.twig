@@ -4,7 +4,14 @@
             {% for column in SP.ACF.get_field('footer_icons', 'option') %}
                 <div class="icon-title">
                     <div class="footer-icon">
-                        <img src="{{ column.icon.url }}" />
+                        {% if column.link_type == 'url' %}
+                            <a href="{{ column.url }}"><img src="{{ column.icon.url }}" /></a>
+                        {% elseif column.link_type == "appointment" %}
+                            <a href="#contact-form" class="contact fancybox"><img src="{{ column.icon.url }}" /></a>
+                        {% else %}
+                            <img src="{{ column.icon.url }}" />
+                        {% endif %}
+
                     </div>
                     <h2><small>{{ column.small_header }}</small> {{ column.large_header }}</h2>
                 </div>
