@@ -1,0 +1,38 @@
+#mega-menu {
+  position: absolute;
+  width: 100%;
+  display: none;
+  @include breakpoint(small only) {
+    display: none !important;
+  }
+  @include breakpoint(medium only) {
+    display: none !important;
+  }
+  > .row.column {
+    background-color: $white;
+    padding: rem-calc(60px) rem-calc(50px);
+    .icon-title {
+      margin-bottom: rem-calc(14px);
+    }
+    a {
+      color: $dark-gray;
+      font-size: rem-calc(18px);
+      text-transform: uppercase;
+      padding: rem-calc(14px) 0 rem-calc(14px) rem-calc(25px);
+      &:before {
+        content: "\f105";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem-calc(25px);
+        color: $primary-dark-color;
+        line-height: .8rem;
+        position: absolute;
+        left: rem-calc(9px);
+      }
+      &:hover {
+        color: scale_color($primary-color, $lightness: -15%);
+      }
+    }
+  }
+}

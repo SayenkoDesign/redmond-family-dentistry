@@ -106,17 +106,6 @@ ul.menu {
   li a {
     padding: 0 0 rem-calc(15px) rem-calc(25px);
     font-size: rem-calc(18px);
-    &:before {
-      content: "\f105";
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      font-size: rem-calc(25px);
-      color: $primary-dark-color;
-      line-height: .8rem;
-      position: absolute;
-      left: rem-calc(9px);
-    }
     &:hover {
       text-decoration: none;
     }
