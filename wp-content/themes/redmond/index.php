@@ -5,6 +5,16 @@ $twig = $container->get("twig.environment");
 $data = [];
 $template = 'page.html.twig';
 
+ob_start();
+dynamic_sidebar('footer_1');
+$data['footer_1'] = ob_get_clean();
+ob_start();
+dynamic_sidebar('footer_2');
+$data['footer_2'] = ob_get_clean();
+ob_start();
+dynamic_sidebar('footer_3');
+$data['footer_3'] = ob_get_clean();
+
 setup_postdata($post);
 $flexibleContent = [];
 while(have_rows('content')) {
