@@ -26,4 +26,11 @@ jQuery(function() {
         dots: true,
         arrows: false
     });
+
+    jQuery('.header .services').on("click", function(e){
+        jQuery(this).children('a').toggleClass("active");
+        jQuery('#mega-menu').fadeToggle();
+        e.preventDefault();
+        return false;
+    });
 });
