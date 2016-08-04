@@ -20,6 +20,7 @@
 @import "modules/reviews-slider";
 @import "modules/table";
 @import "modules/title-section";
+@import "modules/team-members";
 
 // classes
 h1, h2, h3, h4, h5, h6 {
@@ -110,4 +111,49 @@ ul.menu {
       text-decoration: none;
     }
   }
+}
+
+.accordion {
+  background-color: transparent;
+}
+.accordion-title {
+  font-size: rem-calc(25px);
+  color: $primary-color;
+  padding: 0 0 0 rem-calc(32px);
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  &::before {
+    font-size: rem-calc(20px);
+    right:auto;
+    left: 0;
+    margin-top: 0;
+    border-radius: 100%;
+    color: $dark-gray;
+    border: 2px solid $primary-color;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    display: block;
+    padding-left: rem-calc(5px);
+    background-color: $white;
+  }
+  &:hover {
+    color: #f58124;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  &:focus, &:active {
+    background-color: transparent;
+    text-decoration: none;
+  }
+}
+:last-child:not(.is-active) > .accordion-title {
+  border: none;
+}
+.accordion-content {
+  border: none;
+  background-color: transparent;
+  color: $body-font-color;
 }

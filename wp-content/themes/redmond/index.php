@@ -52,6 +52,9 @@ while(have_rows('content')) {
         case 'generic_content':
             $flexibleContent[] = $twig->render('modules/content.html.twig', $data);
             break;
+        case 'team_members':
+            $flexibleContent[] = $twig->render('modules/team-members.html.twig', $data);
+            break;
         default:
             throw new Exception('Could not render layout for '.$layout);
             break;
