@@ -1,5 +1,25 @@
-<header class="header" data-sticky data-options="marginTop:0;" style="width:100%">
+<header class="header" data-sticky data-sticky-on="large" data-options="marginTop:0;" style="width:100%">
     <div class="wrapper">
+        <div class="small-menu hide-for-large">
+            <div class="menu-bar" data-responsive-toggle="mobile-menu" data-hide-for="large">
+                <a href="{{ SP.WordPress.siteURL() }}"><img src="{{ SP.ACF.get_field('logo', 'option').url }}" alt="" class="mobile-logo" /></a>
+                <a href="tel:{{ SP.ACF.get_field('phone_number', 'option')|preg_replace('/[^0-9,]/', '') }}" class="phone"><i class="fa fa-phone"></i></a>
+                <a href="#" class="bars" data-toggle><i class="fa fa-bars"></i></a>
+            </div>
+            <div id="mobile-menu" class="mobile-menu">
+
+                {{
+                SP.WordPress.menu({
+                    'theme_location': 'mobile_menu',
+                    'items_wrap': '<ul id="%1$s" class="%2$s" data-drilldown>%3$s</ul>',
+                    'container': false,
+                    'menu_id': '',
+                    'menu_class': 'vertical menu',
+                    'walker': walkers.drilldown,
+                })
+                }}
+            </div>
+        </div>
         <div class="large-menu">
             <div class="top-bar">
                 <div class="row column">
@@ -60,3 +80,4 @@
         </div>
     </div>
 </header>
+<div class="spacer"></div>

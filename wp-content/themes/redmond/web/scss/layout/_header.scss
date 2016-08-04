@@ -4,6 +4,55 @@
 }
 .header {
   height: auto !important;
+  @include breakpoint(small only) {
+    position: relative !important;
+  }
+  @include breakpoint(medium only) {
+    position: relative !important;
+  }
+  .small-menu {
+    text-align: right;
+    .menu-bar {
+      padding: rem-calc(8px) 0;
+      display: block !important;
+      @include breakpoint(large) {
+        display: none !important;
+      }
+    }
+    img {
+      background-color: $primary-color;
+      height: 80px;
+      margin: rem-calc(-8px) 0;
+      float: left;
+      padding: rem-calc(8px) rem-calc(60px) rem-calc(8px) rem-calc(20px);
+    }
+    .fa {
+      color: $primary-color;
+      font-size: rem-calc(64px);
+      line-height: 1;
+      margin: 0 rem-calc(10px);
+      &:hover {
+        color: $primary-dark-color;
+      }
+    }
+    .mobile-menu {
+      text-align: center;
+      .is-drilldown {
+        max-width: 100% !important;
+      }
+      .menu {
+        background-color: $secondary-light-color;
+      }
+      .is-drilldown-submenu {
+        position: absolute;
+        background-color: $secondary-light-color;
+      }
+      a {
+        text-transform: uppercase;
+        padding: rem-calc(16px);
+      }
+    }
+  }
   .large-menu {
     display: none;
     @include breakpoint(large) {
@@ -85,12 +134,9 @@
       }
       .services a {
         &::after {
-          content: "\f105";
+          content: "\f107";
           font-family: "FontAwesome";
           padding-left: rem-calc(8px);
-        }
-        &.active::after {
-          content: "\f107";
         }
       }
     }
@@ -108,5 +154,11 @@
       transform: translateY(-50%);
       left: calc(100% - 200px)
     }
+  }
+}
+.spacer {
+  width:100%;
+  @include breakpoint(large) {
+    height: rem-calc(102px);
   }
 }

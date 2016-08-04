@@ -14,6 +14,9 @@ $data['footer_2'] = ob_get_clean();
 ob_start();
 dynamic_sidebar('footer_3');
 $data['footer_3'] = ob_get_clean();
+$data['walkers'] = [
+    'drilldown' => new \Supertheme\WordPress\DrillDownMenuWalker(),
+];
 
 setup_postdata($post);
 $flexibleContent = [];
