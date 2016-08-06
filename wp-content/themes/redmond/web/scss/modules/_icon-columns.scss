@@ -1,6 +1,5 @@
 .icon-columns {
   margin-bottom: rem-calc(70px);
-  padding: 0 rem-calc(40px);
   .row {
     .columns {
       margin-bottom: rem-calc(30px);
@@ -13,6 +12,17 @@
   li a {
     text-transform: uppercase;
     color: $secondary-color;
+    &:before {
+      content: "\f105";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      font-size: rem-calc(25px);
+      color: $primary-dark-color;
+      line-height: .8rem;
+      position: absolute;
+      left: rem-calc(9px);
+    }
     &:hover {
       color: $primary-color;
     }

@@ -18,11 +18,38 @@ parameters:
     - "html5"
     - "post-thumbnails"
   wordpress.translations: "%template_dir%/languages"
+  wordpress.sidebars:
+    -
+      id: "footer_1"
+      name: "Footer Left"
+      description: "Left Footer Menu"
+      before_widget: '<section id="%1$s" class="widget %2$s">'
+      after_widget: '</section>'
+      before_title: '<h2 class="widgettitle">'
+      after_title: '</h2>'
+    -
+      id: "footer_2"
+      name: "Footer Center"
+      description: "Center Footer Menu"
+      before_widget: '<section id="%1$s" class="widget %2$s">'
+      after_widget: '</section>'
+      before_title: '<h2 class="widgettitle">'
+      after_title: '</h2>'
+    -
+      id: "footer_3"
+      name: "Footer Right"
+      description: "Right Footer Menu"
+      before_widget: '<section id="%1$s" class="widget %2$s">'
+      after_widget: '</section>'
+      before_title: '<h2 class="widgettitle">'
+      after_title: '</h2>'
   wordpress.menus:
     desktop_menu: "Desktop Menu"
     mobile_menu: "Mobile Menu"
   wordpress.image_sizes:
       beforeafter: [550, 270, true]
+      partners: [9999, 80, false]
+      team_member: [650, 760, true]
   wordpress.styles:
     - { id: "ptserif", source: "https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic", deps: ~ }
     - { id: "lato", source: "https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900italic,900,300italic,300,100italic,100", deps: ~ }
@@ -86,6 +113,8 @@ services:
     arguments: ["%twig.paths%"]
   twig.debug:
     class: "Twig_Extension_Debug"
+  twig.preg:
+    class: "Supertheme\\WordPress\\Twig\\Extension\\PregExtension"
   twig.form_translation:
     class: "Symfony\\Bridge\\Twig\\Extension\\TranslationExtension"
     arguments: ["@translater"]
@@ -112,6 +141,7 @@ services:
     arguments: ["@twig.loader", "%twig.options%"]
     calls:
       - ["addExtension", ["@twig.debug"]]
+      - ["addExtension", ["@twig.preg"]]
       - ["addExtension", ["@twig.form_translation"]]
       - ["addExtension", ["@twig.form_extension"]]
       - ["addGlobal", ["SP", "@twig.supertheme"]]

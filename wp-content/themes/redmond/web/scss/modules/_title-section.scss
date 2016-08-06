@@ -1,6 +1,12 @@
 // our services row in home page
 .title-section {
-  padding: rem-calc(25px) rem-calc(40px);
+  padding: rem-calc(25px) 0;
+  .icon-title {
+    margin-bottom: rem-calc(25px);
+  }
+  h2 {
+    margin: 0;
+  }
   p {
     color: $secondary-color;
     margin: 0;

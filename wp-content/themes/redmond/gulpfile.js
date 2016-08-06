@@ -93,7 +93,7 @@ gulp.task('styles', function(){
             style:          options.scripts.style,
             includePaths:   options.styles.includePaths,
             comments:       options.styles.comments,
-            source_map:     options.styles.source_map,
+            sourceComments:     options.styles.sourceComments,
             time:           options.styles.time
         }))
         .pipe(autoprefix('last 4 version'))

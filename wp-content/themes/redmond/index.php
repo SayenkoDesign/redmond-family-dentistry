@@ -5,6 +5,19 @@ $twig = $container->get("twig.environment");
 $data = [];
 $template = 'page.html.twig';
 
+ob_start();
+dynamic_sidebar('footer_1');
+$data['footer_1'] = ob_get_clean();
+ob_start();
+dynamic_sidebar('footer_2');
+$data['footer_2'] = ob_get_clean();
+ob_start();
+dynamic_sidebar('footer_3');
+$data['footer_3'] = ob_get_clean();
+$data['walkers'] = [
+    'drilldown' => new \Supertheme\WordPress\DrillDownMenuWalker(),
+];
+
 setup_postdata($post);
 $flexibleContent = [];
 while(have_rows('content')) {
@@ -41,6 +54,9 @@ while(have_rows('content')) {
             break;
         case 'generic_content':
             $flexibleContent[] = $twig->render('modules/content.html.twig', $data);
+            break;
+        case 'team_members':
+            $flexibleContent[] = $twig->render('modules/team-members.html.twig', $data);
             break;
         default:
             throw new Exception('Could not render layout for '.$layout);

@@ -1,0 +1,69 @@
+<section class="team-members">
+    {% for members in SP.ACF.get_sub_field('members')|batch(3, false) %}
+        {% set outerlooop = loop.index %}
+        <div class="overview">
+            <div class="row small-up-1 medium-up-3 large-up-3">
+                {% for member in members %}
+                    {% if member %}
+                        <div class="column">
+                            <div class="member info">
+                                <a class="hide-for-medium" data-toggle="team-member-details-modal-{{ outerlooop }}-{{ loop.index }}">
+                                    <img src="{{ member.image.sizes.team_member }}" alt="">
+                                </a>
+                                <a class="hide-for-small-only" data-toggle="team-member-details-{{ outerlooop }}-{{ loop.index }}">
+                                    <img src="{{ member.image.sizes.team_member }}" alt="">
+                                </a>
+                                <h3>{{ member.name }}</h3>
+                                <h6>{{ member.position }}</h6>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="member-details hide-for-small-only">
+            <div class="row column">
+                {% for member in members %}
+                    {% if member %}
+                        <div class="member" id="team-member-details-{{ outerlooop }}-{{ loop.index }}">
+                            <a class="close" data-close></a>
+                            <div class="professional">
+                                <h2>Professional Bio</h2>
+                                {{ member.professional_bio }}
+                            </div>
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                    <a href="#" class="accordion-title">Personal Bio</a>
+                                    <div class="accordion-content" data-tab-content>
+                                        {{ member.personal_bio }}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="member reveal" id="team-member-details-modal-{{ outerlooop }}-{{ loop.index }}" data-reveal>
+                            <a class="close" data-close></a>
+                            <div class="member info">
+                                <h3>{{ member.name }}</h3>
+                                <h6>{{ member.position }}</h6>
+                            </div>
+                            <div class="professional">
+                                <h2>Professional Bio</h2>
+                                {{ member.professional_bio }}
+                            </div>
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                    <a href="#" class="accordion-title">Personal Bio</a>
+                                    <div class="accordion-content" data-tab-content>
+                                        {{ member.personal_bio }}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</section>

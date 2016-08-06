@@ -1,1 +1,83 @@
+<header class="header" data-sticky data-sticky-on="large" data-options="marginTop:0;" style="width:100%">
+    <div class="wrapper">
+        <div class="small-menu hide-for-large">
+            <div class="menu-bar" data-responsive-toggle="mobile-menu" data-hide-for="large">
+                <a href="{{ SP.WordPress.siteURL() }}"><img src="{{ SP.ACF.get_field('logo', 'option').url }}" alt="" class="mobile-logo" /></a>
+                <a href="tel:{{ SP.ACF.get_field('phone_number', 'option')|preg_replace('/[^0-9,]/', '') }}" class="phone"><i class="fa fa-phone"></i></a>
+                <a href="#" class="bars" data-toggle><i class="fa fa-bars"></i></a>
+            </div>
+            <div id="mobile-menu" class="mobile-menu">
 
+                {{
+                SP.WordPress.menu({
+                    'theme_location': 'mobile_menu',
+                    'items_wrap': '<ul id="%1$s" class="%2$s" data-drilldown>%3$s</ul>',
+                    'container': false,
+                    'menu_id': '',
+                    'menu_class': 'vertical menu',
+                    'walker': walkers.drilldown,
+                })
+                }}
+            </div>
+        </div>
+        <div class="large-menu">
+            <div class="top-bar">
+                <div class="row column">
+                    <div class="top-bar-right">
+                        <ul class="horizontal menu">
+                            <li>
+                                <a href="tel:{{ SP.ACF.get_field('phone_number', 'option')|preg_replace('/[^0-9,]/', '') }}" class="phone">
+                                    {{ SP.ACF.get_field('phone_number', 'option') }}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ SP.ACF.get_field('location_url', 'option') }}" class="location">
+                                    {{ SP.ACF.get_field('location_text', 'option') }} <i class="fa fa-map-marker"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact-form" class="tiny primary fancybox contact button">Request Appointment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-bar">
+                <div class="row column">
+                    {{
+                        SP.WordPress.menu({
+                            'theme_location': 'desktop_menu',
+                            'items_wrap': '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                            'container': false,
+                            'menu_id': '',
+                            'menu_class': 'horizontal menu'
+                        })
+                    }}
+                </div>
+            </div>
+            <div class="logo-box">
+                <a href="{{ SP.WordPress.siteURL() }}"><img src="{{ SP.ACF.get_field('logo', 'option').url }}" alt=""></a>
+            </div>
+        </div>
+        <div id="mega-menu">
+            <div class="row column">
+                {% for menu in SP.ACF.get_field('mega_menu', 'option') %}
+                    <div class="medium-4 columns">
+                        <div class="icon-title">
+                            <img src="{{ menu.icon.url }}" />
+                            <h2><small>{{ menu.small_heading }}</small> {{ menu.large_heading }}</h2>
+                        </div>
+                        <ul class="vertical menu">
+                            {% for link in menu.links %}
+                                {% if link.link %}
+                                    <li><a href="{{ SP.WordPress.URL(link.link.ID) }}">{{ link.link.post_title }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</header>
+<div class="spacer"></div>
